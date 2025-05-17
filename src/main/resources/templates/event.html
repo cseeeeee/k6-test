@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Event</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h2>이벤트 페이지</h2>
+    <button id="cntBtn">클릭</button>
+    <p>현재 카운트: <span id="count" th:text="${clickCount}">0</span></p>
+
+    <script>
+      let count = 0;
+
+      $('#cntBtn').on('click', function (){
+        count++;
+        $('#count').text(count);
+      });
+    </script>
+  </body>
+</html>
